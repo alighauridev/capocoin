@@ -1,74 +1,41 @@
 import React from "react";
-import { FaDiscord } from "react-icons/fa";
-import { AiOutlineTwitter } from "react-icons/ai";
+import {
+  FaAccessibleIcon,
+  FaDiscord,
+  FaPage4,
+  FaTelegram,
+  FaTwitter,
+} from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
+import { AiOutlineTwitter, AiOutlineTelegram } from "react-icons/ai";
 import "../scss/footer.scss";
 import { LinkRounded } from "@material-ui/icons";
+import bac from "../assests/footer-bac.jpg";
+import logo1 from "../assests/logo-1.webp";
+import logo2 from "../assests/logo-2.webp";
 const Footer = () => {
   return (
     <>
       <footer id="footer">
         <div className="container">
-          <div className="footer-1">
-            <div className="footer-wrap-1">
-              <div className="footer-img">
-                <img src="/images/wolf-content/logo.png" alt="" />
-              </div>
-              <div className="footer-span">
-                <span>©2023 WOLFPACK LABS LLC</span>
-              </div>
+          <div className="top">
+            <div className="logo">
+              <a href="/home">
+                <img src={logo1} alt="" />
+                <img src={logo2} alt="" />
+              </a>
             </div>
+            <p>Check us out here!</p>
           </div>
-          <div className="footer-2">
-            <div className="follow-mid">Follow US</div>
-            <div className="footer-icons">
-              <div className="icon">
-                <a
-                  href={"https://twitter.com/WagmiWolvesClub"}
-                  title={"Twitter"}
-                  target={"_blank"}
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </div>
-
-              <div className="icon">
-                <a
-                  href={"https://discord.gg/yMTXSGBmVE"}
-                  title={"Discord"}
-                  target={"_black"}
-                >
-                  <FaDiscord />
-                </a>
-              </div>
-              <div className="icon">
-                <a
-                  href={"https://linktr.ee/wagmiwolvesclub"}
-                  title={"Instragram"}
-                  target={"_black"}
-                >
-                  <LinkRounded
-                    style={{
-                      padding: "0px !important",
-                    }}
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="footer-3">
-            <div className="footer-wrap-3">
-              <h1>Get in Touch</h1>
-              <div>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Email Address"
-                />
-              <div className="btn">
-              <button>Subscribe</button>
-              </div>
-              </div>
+          <div className="bottom">
+            <span>2023 by Capoo. No Copyright Infringement Intended</span>
+            <div className="icons">
+              <a href="#">
+                <FaTwitter />
+              </a>
+              <a href="#">
+                <FaTelegramPlane />
+              </a>
             </div>
           </div>
         </div>

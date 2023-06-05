@@ -5,7 +5,8 @@ import "../scss/navigation.scss";
 import { FaDiscord } from "react-icons/fa";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { MdKeyboardArrowUp } from "react-icons/md";
-
+import logo1 from "../assests/logo-1.webp";
+import logo2 from "../assests/logo-2.webp";
 import { LinkOff, LinkOffOutlined, LinkRounded } from "@material-ui/icons";
 const Navigation = () => {
   const [navToggler, setNavToggler] = useState(false);
@@ -30,25 +31,14 @@ const Navigation = () => {
   }
   return (
     <>
-      <header
-        className={navToggler ? "nav__active" : ""}
-        style={
-          scroll
-            ? {
-                background: "rgb(10 8 7 / 75%)",
-                backdropFilter: "blur(14px)",
-                boxShadow: "0 0 0.7px #ffffff",
-                transitions: "0.5s ease-in-out",
-              }
-            : null
-        }
-      >
+      <header className={navToggler ? "nav__active" : ""}>
         <div className="outer">
           <div className="container">
             <div className="nav__grid">
               <div className="logo">
                 <a href="/home">
-                  <img src="/images/wolf-content/logo.png" alt="" />
+                  <img src={logo1} alt="" />
+                  <img src={logo2} alt="" />
                 </a>
               </div>
               <nav>
@@ -65,50 +55,12 @@ const Navigation = () => {
                       </li>
                     );
                   })}
-                  <li>
-                    <Link to={"/collection"} target="_blank">
-                      L2 Collections
-                    </Link>
-                  </li>
+                  <li></li>
                 </ul>
               </nav>
               <div className="nav__btns">
-                <div className="logo-icons">
-                  <div className="icon">
-                    <a
-                      href={"https://twitter.com/WagmiWolvesClub"}
-                      title={"Twitter"}
-                      target={"_blank"}
-                    >
-                      <AiOutlineTwitter />
-                    </a>
-                  </div>
-
-                  <div className="icon">
-                    <a
-                      href={"https://discord.gg/yMTXSGBmVE"}
-                      title={"Discord"}
-                      target={"_black"}
-                    >
-                      <FaDiscord />
-                    </a>
-                  </div>
-                  <div className="icon">
-                    <a
-                      href={"https://linktr.ee/wagmiwolvesclub"}
-                      title={"Instragram"}
-                      target={"_black"}
-                      style={{
-                        padding: "6px",
-                      }}
-                    >
-                      <LinkRounded
-                        style={{
-                          padding: "0px",
-                        }}
-                      />
-                    </a>
-                  </div>
+                <div className="btn">
+                  <span>CHART</span>
                 </div>
                 <i onClick={() => barBtn()} className="bars">
                   <img

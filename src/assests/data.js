@@ -5,8 +5,12 @@ import img4 from "../main.images/nfts/nft-4.png";
 import img5 from "../main.images/nfts/nft-5.png";
 export const nav = [
   {
+    name: "Home",
+    path: "#home",
+  },
+  {
     name: "About",
-    path: "#product",
+    path: "#about",
   },
   {
     name: "Roadmap",
@@ -14,14 +18,9 @@ export const nav = [
   },
 
   {
-    name: "Team",
-    path: "#team",
+    name: "Tokenomics",
+    path: "#tokenomics",
   },
-  {
-    name: "Faq",
-    path: "#faq",
-  },
-
 ];
 export const Nfts = [img1, img2, img4, img5, img4, img2];
 export const team = [
@@ -52,7 +51,7 @@ export const team = [
     position: "Social Media Manager",
     path: img4,
     desc: "This man makes Joe exotic look like an accountant. A lover of all exotic creatures and an expert in the NFT space. Karlo is an expert in the NFT space and with social media marketing, amassing over 150k across his channels. He is experienced in design, social media and discord management. Running a successful print on demand business for 3 years now. Actively trading and working in the NFT space. Experienced in design, social media and discord management.",
-    link: 'https://linktr.ee/exotickarlo'
+    link: "https://linktr.ee/exotickarlo",
   },
 ];
 
@@ -105,12 +104,12 @@ export const roadmap = [
   },
 ];
 
-
-
 export const FAQ = [
   {
     q: "What is NFTs?",
-    ans: ["NFTs Stands for non-fungible tokens. Non-fungible tokens are unique cryptographic tokens that exist on blockchain and cannot be replicated-having unique identification code, metadata and properties.     "],
+    ans: [
+      "NFTs Stands for non-fungible tokens. Non-fungible tokens are unique cryptographic tokens that exist on blockchain and cannot be replicated-having unique identification code, metadata and properties.     ",
+    ],
   },
 
   {
@@ -121,15 +120,21 @@ export const FAQ = [
   },
   {
     q: "Are NFTs a good investment? ",
-    ans: ["NFTs are digital assets that act as secure documentation of ownership and can be a worthwhile investment for collectors and investors. "],
+    ans: [
+      "NFTs are digital assets that act as secure documentation of ownership and can be a worthwhile investment for collectors and investors. ",
+    ],
   },
   {
     q: "What's the future of NFTs?",
-    ans: ["NFTs have a great future, especially with the idea of turning real world assets into NFTs. Also the idea of fractionalizing NFTs; that is allowing more than one person to co-own an NFT will bring NFT into mass adoption."],
+    ans: [
+      "NFTs have a great future, especially with the idea of turning real world assets into NFTs. Also the idea of fractionalizing NFTs; that is allowing more than one person to co-own an NFT will bring NFT into mass adoption.",
+    ],
   },
   {
     q: "How do i know which NFT will be worth of money?",
-    ans: ["The social proof associated with the project behind an NFT is one of the decisive factors that determine the NFT's value. Checking their profiles on social media platforms like Twitter and Instagram can help one gauge their acceptability."],
+    ans: [
+      "The social proof associated with the project behind an NFT is one of the decisive factors that determine the NFT's value. Checking their profiles on social media platforms like Twitter and Instagram can help one gauge their acceptability.",
+    ],
   },
   {
     q: "What about the price?",
