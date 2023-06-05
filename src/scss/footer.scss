@@ -1,0 +1,241 @@
+@import "./variable.scss";
+@import "./media.scss";
+
+@font-face {
+  font-family: "DEADLY";
+  src: url("./font/DEADLY\ KILLERS.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Barlow", system-ui;
+  src: url("./font/Demo_Fonts/Fontspring-DEMO-rocgrotesk-medium.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+#footer {
+  background-color: #0b0b0b;
+  position: relative;
+  @include display {
+    padding: 0 15px;
+  }
+  .container {
+    font-family: "Rubik", system-ui !important;
+    color: white !important;
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.4fr;
+    letter-spacing: 0.1em;
+    align-items: center;
+    font-family: "Barlow", system-ui;
+    padding: 45px 0px;
+    /* display: flex; */
+    justify-content: space-between;
+    @media (max-width: 990px) {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 26px;
+      padding: 50px 0px 40px;
+    }
+    // @include xtablet1 {
+
+    // }
+    .footer-1 {
+      display: flex;
+      .footer-wrap-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        @media (max-width: 990px) {
+          justify-content: center;
+          align-items: center;
+        }
+
+        @include xtablet1 {
+          justify-content: center;
+          gap: 6px;
+        }
+        .footer-img {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          @include xtablet1 {
+          }
+          @media (max-width: 990px) {
+            justify-content: center;
+          }
+          img {
+            width: 9rem;
+            height: auto;
+            cursor: pointer;
+            text-align: center;
+            @include coloum {
+              width: 8rem;
+            }
+          }
+        }
+        span {
+          color: white;
+          font-weight: 100 !important;
+          text-align: start;
+          @include xtablet1 {
+            color: white;
+            font-weight: 100 !important;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .footer-2 {
+      display: flex;
+      gap: 20px;
+      color: white;
+      flex-direction: column;
+      justify-content: center;
+      height: 80%;
+      border-top: 1px solid #ffffffab;
+      border-bottom: 1px solid #ffffffab;
+      cursor: pointer;
+      cursor: pointer;
+
+      @media (max-width: 990px) {
+        border: 0px !important;
+        gap: 20px;
+      }
+      // @include coloum {
+      //   display: flex;
+      //   gap: 2.2rem;
+      //   flex-direction: column;
+      //   text-align: center;
+      // }
+      // @include xtablet1 {
+      //   flex-direction: row;
+      //   padding: 18px 0;
+      //   gap: 2.5rem;
+      //   font-size: 14px;
+      // }
+      cursor: pointer;
+      .follow-mid {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        letter-spacing: 2px;
+        font-size: 1.8rem;
+      }
+      .footer-icons {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: white;
+        color: white;
+        justify-content: center;
+        justify-content: center;
+        @include xtablet7 {
+          gap: 1.2rem;
+        }
+
+        .icon {
+          border-radius: 50%;
+          transition: all 0.3s ease-in-out;
+          a {
+            align-items: center;
+            /* background: #222; */
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            font-size: 27px;
+            justify-content: center;
+            padding: 5px;
+            transition: all 0.5s ease-in-out;
+            svg {
+              padding: 1px;
+              @include xtablet7 {
+                padding: 2px;
+              }
+              @include xtablet13 {
+                padding: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .footer-3 {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      @media ((max-width: 990px)) {
+        justify-content: center;
+        width: 100%;
+      }
+      .footer-wrap-3 {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center !important;
+        flex-direction: column;
+        height: 100%;
+
+        gap: 25px !important;
+        h1 {
+          font-size: 2.5rem;
+          text-align: center;
+          color: white;
+          width: 100%;
+        }
+        display: flex;
+        gap: 10px;
+        div {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          justify-content: center;
+        }
+        input {
+          font-size: 16px;
+          padding: 18px 45px 18px 25px;
+          border-width: 1px 1px 1px 1px;
+          border-color: #edededed;
+          outline: none;
+          color: #524f4f;
+          width: 100%;
+          border-radius: 4px;
+        }
+        .btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          button {
+            font-size: 16px;
+            padding: 18px 18px;
+            border-width: 1px 1px 1px 1px;
+            border-color: #edededed;
+            outline: none;
+            width: 100%;
+            color: #303030;
+            font-weight: bold;
+            background-color: white;
+            border-radius: 4px;
+          }
+        }
+      }
+      p {
+        font-size: 1rem;
+        text-align: center;
+        color: white;
+        line-height: 1.5em;
+        padding: 0px 32px;
+        @include md {
+          padding: 0px 20px;
+        }
+      }
+    }
+  }
+}

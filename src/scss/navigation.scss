@@ -1,0 +1,287 @@
+@import "./variable.scss";
+@import "./media.scss";
+
+@font-face {
+  font-family: "Barlow", system-ui;
+  src: url("./font/Demo_Fonts/Fontspring-DEMO-rocgrotesk-bold.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Roc_a";
+  src: url("./font/Demo_Fonts/Fontspring-DEMO-rocgroteskextrawide-black.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+header {
+  top: 0px;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1001;
+
+  transition: 0.3s all;
+
+  .outer {
+    position: relative;
+
+    @include xtablet7 {
+      // height: 13vh;
+    }
+    .container {
+      max-width: 1250px;
+      margin: 0 auto;
+      @include display {
+        padding: 0 15px;
+      }
+      .nav__grid {
+        display: grid;
+        /* place-items: center; */
+        grid-template-columns: 1fr 4fr 1fr;
+        position: relative;
+        align-items: center;
+        @include flex {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .logo {
+          justify-self: start;
+          display: flex;
+          img {
+            max-width: 80px;
+            // margin-left: -18px;
+            margin-left: -6px;
+            @include xtablet7 {
+              width: 74px;
+            }
+          }
+        }
+        nav {
+          ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            gap: 40px;
+            > li {
+              margin: 0.5rem 0px !important;
+              display: flex;
+              position: relative;
+              transition: 0.3s all;
+              font-size: 18px;
+              -webkit-transition: 0.3s all;
+              -moz-transition: 0.3s all;
+              -ms-transition: 0.3s all;
+              -o-transition: 0.3s all;
+              align-items: center;
+              justify-content: center;
+              > a {
+                transition: 0.3s all;
+                -webkit-transition: 0.3s all;
+                -moz-transition: 0.3s all;
+                -ms-transition: 0.3s all;
+                -o-transition: 0.3s all;
+                font-weight: 300;
+                text-decoration: none;
+                color: #fff;
+                text-shadow: 10px 4px 27px black;
+                font-family: "Rubik", system-ui !important;
+                /* font-weight: 600; */
+                text-transform: capitalize;
+                font-size: clamp(8px, 10vw, 18.5px);
+                /* letter-spacing: 0.2px; */
+              }
+            }
+            > li::before {
+              content: "";
+              position: absolute;
+              bottom: -12px;
+              left: 0;
+              width: 0%;
+              height: 3.5px;
+              transition: 0.3s all ease-out;
+              background-color: #b94841;
+              border-radius: 3px;
+            }
+            > li:hover::before {
+              width: 100%;
+            }
+          }
+        }
+        .nav__btns {
+          display: flex;
+          align-items: center;
+          gap: 1.2rem;
+          justify-content: end;
+          @include xtablet7 {
+            gap: 1rem;
+          }
+          i{
+            padding: 3px 3px !important;
+          }
+
+          .logo-icons {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: white;
+            color: white;
+            @include xtablet7 {
+              gap: 0.6rem;
+            }
+
+            .icon {
+              border-radius: 50%;
+              transition: all 0.3s ease-in-out;
+              a {
+                align-items: center;
+                background: #222;
+                border-radius: 4px;
+                color: #fff;
+                cursor: pointer;
+                display: flex;
+                font-size: 27px;
+                justify-content: center;
+                padding: 5px;
+                transition: all 0.5s ease-in-out;
+                svg {
+                  padding: 1px;
+                  @include xtablet7 {
+                    padding: 2px;
+                  }
+                  @include xtablet13 {
+                    padding: 3px;
+                  }
+                }
+              }
+            }
+            .bars{
+              img{
+                max-width: 20px;
+                filter: invert(1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// .nav__active {
+//   background: #0a0807 !important;
+//   backdrop-filter: blur(1px) !important;
+// }
+.auto_scroll {
+  position: fixed;
+  bottom: 5%;
+  right: 3.7%;
+  cursor: pointer;
+  transition: 0.3s all;
+  z-index: 1001;
+  /* max-width: 1200px; */
+  transform: scale(0);
+  /* margin: auto; */
+  @include display {
+    right: 1.4%;
+  }
+  @include coloum {
+    right: 1.7%;
+  }
+
+  > i {
+    width: 50px;
+    background: #b94841;
+    height: 50px;
+    display: grid;
+    place-content: center;
+    border-radius: 100px;
+    border: 1px solid 1px solid #70696945;
+    box-shadow: #111111 0px 2px 6px, inset 0 0 23px #0000004d;
+    pointer-events: auto;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    color: #fff;
+    svg{
+      font-size: 2.4rem;
+      @include md{
+        font-size: 2.3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    .nav__grid {
+      .nav__btns {
+        > i {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 0) and (max-width: 992px) {
+  header {
+    .nav__grid {
+      grid-template-columns: 1fr 1.5fr !important;
+      .logo {
+      }
+      nav {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        z-index: 100;
+        overflow: hidden;
+        box-shadow: 0 0 5px black;
+
+        ul {
+          justify-content: start !important;
+          transition: 0.3s all ease-out;
+          flex-direction: column;
+          margin-top: -200%;
+          border-bottom: 1px solid #70696945;
+          z-index: 1000;
+          align-items: flex-start !important;
+          background: #0a0807;
+          padding: 15px 10px;
+          font-size: 1.4rem;
+          li {
+            margin-right: unset;
+            margin-bottom: 15px;
+          }
+        }
+        .ul__active {
+          margin-top: 0% !important;
+        }
+      }
+      .nav__btns {
+        > i {
+          align-items: center;
+          background: #222;
+          border-radius: 4px;
+          color: #fff;
+          padding: 12px;
+          cursor: pointer;
+          display: flex;
+          font-size: 28px;
+          justify-content: center;
+          padding: 8px 10px;
+          transition: all 0.5s ease-in-out;
+          height: 100%;
+          @include xtablet7 {
+            height: 42px;
+          }
+        }
+      }
+    }
+  }
+}
