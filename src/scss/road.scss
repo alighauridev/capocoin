@@ -30,9 +30,11 @@
             .box {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+                column-gap: 50px;
 
                 @include md {
                     grid-template-columns: 1fr;
+                column-gap: 0px;
                 }
 
                 .road-list {
@@ -49,12 +51,15 @@
                         text-align: center;
                         padding: 15px 0px;
                         font-size: 28px;
+                      
                     }
 
                     li {
-                        color: rgb(255, 255, 255);
+                        color: white;
+                        font-size: 22px;
+                        letter-spacing: 0.4px;
                         text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px, rgba(0, 0, 0, 0.6) -1px -1px 1px;
-                        font-family: 'font-4';
+                        font-family: 'font-2';
                     }
                 }
 

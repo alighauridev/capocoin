@@ -92,20 +92,7 @@ header {
               }
             }
 
-            // > li::before {
-            //   content: "";
-            //   position: absolute;
-            //   bottom: -12px;
-            //   left: 0;
-            //   width: 0%;
-            //   height: 3.5px;
-            //   transition: 0.3s all ease-out;
-            //   background-color: #b94841;
-            //   border-radius: 3px;
-            // }
-            // > li:hover::before {
-            //   width: 100%;
-            // }
+         
           }
         }
 
@@ -121,11 +108,20 @@ header {
           }
 
           .btn {
-            padding: 8px 15px;
+            padding: 8px 22px;
             border-radius: 50px;
-            border: 3px solid #3B3B3B;
+            outline: 2px solid #3B3B3B;
             cursor: pointer;
             background: #EADE69;
+            transition: all 0.3s ease-in-out;
+            color: #000000;
+
+            // &:hover {
+            //   background: red;
+            //   color: white !important;
+            //   outline: 3px solid #3B3B3B;
+
+            // }
 
             @include sm {
               display: none;
@@ -134,7 +130,6 @@ header {
             span {
               transition: inherit;
 
-              color: #000000;
               font-weight: 700;
               letter-spacing: 0.2em;
               font-style: normal;
