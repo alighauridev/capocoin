@@ -22,7 +22,7 @@ header {
       margin: 0 auto;
 
       @include display {
-        padding: 0 15px;
+        padding: 5px 20px;
       }
 
       .nav__grid {
@@ -31,6 +31,7 @@ header {
         grid-template-columns: 1fr 3fr 0.5fr;
         position: relative;
         align-items: center;
+
         @include flex {
           display: flex;
           align-items: center;
@@ -120,9 +121,9 @@ header {
           }
 
           .btn {
-            padding: 8px;
+            padding: 8px 15px;
             border-radius: 50px;
-            border: 2px solid #3B3B3B;
+            border: 3px solid #3B3B3B;
             cursor: pointer;
             background: #EADE69;
 
@@ -132,7 +133,7 @@ header {
 
             span {
               transition: inherit;
-              margin: 0px 4px 0px 0px;
+
               color: #000000;
               font-weight: 700;
               letter-spacing: 0.2em;
@@ -192,7 +193,8 @@ header {
             .bars {
               img {
                 max-width: 20px;
-                filter: invert(1);
+                // filter: invert(1);
+                max-width: 20px;
               }
             }
           }
@@ -284,9 +286,10 @@ header {
           border-bottom: 1px solid #70696945;
           z-index: 1000;
           align-items: flex-start !important;
-          background: repeat padding-box border-box 0%/auto scroll linear-gradient(180deg, #1CE0DF 0%, #BADA55 100%);
-          padding: 15px 10px;
+          /* background: repeat padding-box border-box 0%/auto scroll linear-gradient(180deg, #1CE0DF 0%, #BADA55 100%); */
+          padding: 0px 20px;
           font-size: 1.4rem;
+          background: #ffdeb6;
 
           li {
             margin-right: unset;
@@ -315,7 +318,7 @@ header {
           color: #363434;
 
           @include xtablet7 {
-            height: 42px;
+            // height: 42px;
           }
         }
       }

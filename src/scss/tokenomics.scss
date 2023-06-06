@@ -64,18 +64,19 @@
 
                     div {
                         padding: 10px 50px;
-                        background-color: #ffdbbf;
-
+                        background-color: rgb(255, 219, 191);
                         border-radius: 50px;
-                        max-width: 350px;
                         display: flex;
                         height: 80px;
                         align-items: start;
                         justify-content: center;
                         flex-direction: column;
+                        width: 325px !important;
 
                         @include md {
                             height: auto;
+                            width:100% !important;
+                            max-width:225 !important;
                         }
 
 

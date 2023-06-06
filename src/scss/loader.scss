@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #000;
+  background: #ffb97e;
 }
 
 .progress__wrapper {
@@ -27,13 +27,16 @@
 .css-5xe99f-MuiLinearProgress-bar1 {
   background: #fff !important;
 }
+
 @keyframes fade-in-out {
   0% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
