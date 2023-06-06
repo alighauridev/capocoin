@@ -46,12 +46,16 @@
         p {
           text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
           color: white;
-          font-size: 30px;
-          letter-spacing: 4.2px;
+          font-size: 36px;
+          font-family: "font-1";
           font-weight: 700;
-          font-family: "font-3";
+          letter-spacing: 4.2px;
+          line-height: 42.4px;
 
+          @include md {
+            letter-spacing: 1.2px;
 
+          }
         }
       }
 
@@ -63,10 +67,12 @@
       justify-content: center;
       position: relative;
       height: 500px;
-      @include sm{
-      height: auto;
-      
+
+      @include sm {
+        height: auto;
+
       }
+
       &::before {
         content: "";
         position: absolute;
@@ -90,10 +96,10 @@
         object-fit: cover;
         padding: 40px;
 
-@include sm{
-  width: 100%;
+        @include sm {
+          width: 100%;
 
-}
+        }
       }
     }
   }

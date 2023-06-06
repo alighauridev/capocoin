@@ -21,8 +21,11 @@ const RoadMapOne = () => {
               </ul>
               <div className="none"></div>
             </div>
-            <div className="box">
-            <div className="none"></div>
+            <div
+              className="box"
+              style={{ gridTemplateColumns: "1fr", marginLeft: "400px" }}
+            >
+              <div className="none"></div>
 
               <ul className="road-list">
                 <h2>PHASE 2</h2>

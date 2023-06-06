@@ -34,7 +34,8 @@
 
                 @include md {
                     grid-template-columns: 1fr;
-                column-gap: 0px;
+                    column-gap: 0px;
+                    margin: 0 !important;
                 }
 
                 .road-list {
@@ -52,7 +53,7 @@
                         text-align: center;
                         padding: 15px 0px;
                         font-size: 28px;
-                      
+
                     }
 
                     li {
